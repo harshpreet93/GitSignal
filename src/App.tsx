@@ -75,7 +75,7 @@ export function App() {
           <p>
             Choosing between open source libraries can be difficult. Many tools offer similar features,
             making the decision seem straightforward. However, adopting a dead or dying project can
-            cause long-term problems—dependencies become deeply embedded in your app and are hard to
+            cause long term problems. Dependencies become deeply embedded in your app and are hard to
             remove or replace.
           </p>
           <p>
@@ -83,6 +83,17 @@ export function App() {
             contributor trends, issue velocity, and more. GitBoard gives you a single page view of
             these metrics so you can make informed decisions about which projects are actively
             maintained and worth depending on.
+          </p>
+        </section>
+
+        <section className="text-sm text-muted-foreground space-y-2 rounded-md border border-border bg-muted/50 p-4">
+          <h2 className="font-medium text-foreground">Note on API Rate Limits</h2>
+          <p>
+            GitBoard uses the GitHub API which limits unauthenticated requests to 60 per hour. If you're
+            comparing multiple repositories, you may hit this limit quickly. To avoid throttling, add your
+            own GitHub personal access token using the "Add token" button above. With a token, the limit
+            increases to 5,000 requests per hour. Your token is stored locally in your browser and never
+            sent to any server other than GitHub.
           </p>
         </section>
 
