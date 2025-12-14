@@ -3,6 +3,9 @@
 Compare GitHub repositories to find the right one for your project.
 
 ![Commit Graph Screenshot](./screenshots/commits.png)
+![Contributors Graph Screenshot](./screenshots/contributors.png)
+![Opened Issues Graph Screenshot](./screenshots/open_issues.png)
+![Closed Issues Graph Screenshot](./screenshots/closed_issues.png)
 
 ## Why GitBoard?
 
@@ -19,7 +22,6 @@ GitHub doesn't make it easy to compare the vital signals of repositories: commit
 - **Shareable URLs** — Repository selections are stored in the URL for easy sharing
 - **Privacy-First** — GitHub tokens are stored locally in your browser, never sent to any server other than GitHub
 
-![Charts Comparison](./screenshots/charts-comparison.png)
 
 ## Getting Started
 
