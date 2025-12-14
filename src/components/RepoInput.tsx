@@ -8,14 +8,12 @@ interface RepoInputProps {
   repos: ParsedRepo[];
   onAddRepo: (repo: ParsedRepo) => void;
   onRemoveRepo: (index: number) => void;
-  maxRepos?: number;
 }
 
 export function RepoInput({
   repos,
   onAddRepo,
   onRemoveRepo,
-  maxRepos = 3,
 }: RepoInputProps) {
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -59,12 +57,11 @@ export function RepoInput({
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="owner/repo or GitHub URL"
-          disabled={repos.length >= maxRepos}
           className="flex-1"
         />
         <Button
           onClick={handleAdd}
-          disabled={repos.length >= maxRepos || !inputValue.trim()}
+          disabled={!inputValue.trim()}
           size="sm"
         >
           <IconPlus className="size-4" />
@@ -97,7 +94,7 @@ export function RepoInput({
 
       {repos.length === 0 && (
         <p className="text-muted-foreground text-xs">
-          Add up to {maxRepos} repositories to compare
+          Add repositories to compare
         </p>
       )}
     </div>

@@ -35,38 +35,45 @@ export function TokenInput({ onTokenChange }: TokenInputProps) {
 
   if (!isEditing) {
     return (
-      <div className="flex items-center gap-2 text-xs">
-        <IconKey className="size-3.5 text-muted-foreground" />
+      <div className="flex items-center gap-3 rounded-lg border border-border bg-muted/50 px-4 py-2.5">
+        <IconKey className="size-4 text-foreground" />
         {hasToken ? (
           <>
-            <span className="text-muted-foreground">API token configured</span>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsEditing(true)}
-              className="h-6 px-2 text-xs"
-            >
-              Change
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={handleClear}
-              className="h-6 px-2 text-xs text-destructive hover:text-destructive"
-            >
-              Remove
-            </Button>
+            <span className="text-sm font-medium text-foreground">API token configured</span>
+            <div className="flex items-center gap-1">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setIsEditing(true)}
+                className="h-7 px-3 text-xs"
+              >
+                Change
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleClear}
+                className="h-7 px-3 text-xs text-destructive hover:text-destructive"
+              >
+                Remove
+              </Button>
+            </div>
           </>
         ) : (
           <>
-            <span className="text-muted-foreground">
-              No API token (60 requests/hour)
-            </span>
+            <div className="flex flex-col">
+              <span className="text-sm font-medium text-foreground">
+                No API token
+              </span>
+              <span className="text-xs text-muted-foreground">
+                Limited to 60 requests/hour
+              </span>
+            </div>
             <Button
-              variant="ghost"
+              variant="default"
               size="sm"
               onClick={() => setIsEditing(true)}
-              className="h-6 px-2 text-xs"
+              className="h-8 px-4"
             >
               Add token
             </Button>
@@ -77,14 +84,14 @@ export function TokenInput({ onTokenChange }: TokenInputProps) {
   }
 
   return (
-    <div className="flex items-center gap-2">
-      <IconKey className="size-3.5 text-muted-foreground" />
+    <div className="flex items-center gap-3 rounded-lg border border-border bg-muted/50 px-4 py-2.5">
+      <IconKey className="size-4 text-foreground" />
       <Input
         type="password"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         placeholder="ghp_xxxxxxxxxxxx"
-        className="h-7 w-64 text-xs"
+        className="h-8 w-64 text-sm"
         autoFocus
         onKeyDown={(e) => {
           if (e.key === "Enter") handleSave();
@@ -92,20 +99,20 @@ export function TokenInput({ onTokenChange }: TokenInputProps) {
         }}
       />
       <Button
-        variant="ghost"
+        variant="default"
         size="sm"
         onClick={handleSave}
-        className="h-6 w-6 p-0"
+        className="h-8 w-8 p-0"
       >
-        <IconCheck className="size-3.5" />
+        <IconCheck className="size-4" />
       </Button>
       <Button
         variant="ghost"
         size="sm"
         onClick={handleCancel}
-        className="h-6 w-6 p-0"
+        className="h-8 w-8 p-0"
       >
-        <IconX className="size-3.5" />
+        <IconX className="size-4" />
       </Button>
     </div>
   );
