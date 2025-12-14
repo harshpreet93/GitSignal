@@ -1,5 +1,5 @@
 const GITHUB_API_BASE = "https://api.github.com";
-const TOKEN_STORAGE_KEY = "gitboard_github_token";
+const TOKEN_STORAGE_KEY = "gitsignal_github_token";
 
 export const POLL_INTERVAL_MS = 10000;
 

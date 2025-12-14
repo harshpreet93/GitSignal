@@ -63,13 +63,13 @@ export function App() {
         <header className="flex items-start justify-between gap-4" role="banner">
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-xl font-semibold">GitBoard</h1>
+              <h1 className="text-xl font-semibold">GitSignal</h1>
               <a
-                href="https://github.com/harshpreet93/gitboard"
+                href="https://github.com/harshpreet93/gitsignal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="View GitBoard on GitHub"
+                aria-label="View GitSignal on GitHub"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ export function App() {
 
         <main className="space-y-6">
           <section className="text-sm text-muted-foreground space-y-2">
-          <h2 className="font-medium text-foreground">Why GitBoard?</h2>
+          <h2 className="font-medium text-foreground">Why GitSignal?</h2>
           <p>
             Choosing between open source libraries can be difficult. Many tools offer similar features,
             making the decision seem straightforward. However, adopting a dead or dying project can
@@ -101,7 +101,7 @@ export function App() {
           </p>
           <p>
             GitHub doesn't make it easy to compare the vital signals of repositories: commit activity,
-            contributor trends, issue velocity, and more. GitBoard gives you a single page view of
+            contributor trends, issue velocity, and more. GitSignal gives you a single page view of
             these metrics so you can make informed decisions about which projects are actively
             maintained and worth depending on.
           </p>
@@ -110,7 +110,7 @@ export function App() {
         <section className="text-sm text-muted-foreground space-y-2 rounded-md border border-border bg-muted/50 p-4">
           <h2 className="font-medium text-foreground">Note on API Rate Limits</h2>
           <p>
-            GitBoard uses the GitHub API which limits unauthenticated requests to 60 per hour. If you're
+            GitSignal uses the GitHub API which limits unauthenticated requests to 60 per hour. If you're
             comparing multiple repositories, you may hit this limit quickly. To avoid throttling, add your
             own GitHub personal access token using the "Add token" button above. With a token, the limit
             increases to 5,000 requests per hour. Your token is stored locally in your browser and never
