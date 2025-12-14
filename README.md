@@ -2,7 +2,7 @@
 
 Compare GitHub repositories to find the right one for your project.
 
-**[Try it live →](https://gitboard.pages.dev/)**
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://gitboard.pages.dev/)
 
 ![Commit Graph Screenshot](./screenshots/commits.png)
 ![Contributors Graph Screenshot](./screenshots/contributors.png)
